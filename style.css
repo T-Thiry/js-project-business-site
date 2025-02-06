@@ -11,7 +11,7 @@ body {
 
 /* --------- The navigation bar starts here ---------- */
 header {
-  background-color: #252525;
+  background-color: #2e2e2e;
   display: flex;
   /* use flexbox for horizontal layout */
   justify-content: center;
@@ -19,8 +19,13 @@ header {
   align-items: center;
   /* center the items vertically */
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 5%;
   /* pushes the items inwards left and right */
+}
+ 
+.logo {
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 li,
@@ -47,14 +52,29 @@ a {
 }
 
 button {
-  background-color: white;
+  background-color: rgb(198, 82, 231);
+  color: white;
   padding: 6px 18px;
+  margin: 10px 0;
   border-radius: 8px;
   border: none;
   font-size: 1rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.1rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-line {
+  width: 1.5rem;
+  height: 1px;
+  margin-bottom: 0.5rem;
+  fill: #dcd1b4;
+  background-color: #dcd1b4;
 }
 
 /* ---------- The navigation bar ends here ---------- */
@@ -64,7 +84,7 @@ button {
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/z12.jpg);
+  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/rounded-lines-edge-background-creative-lines-business-brochure-banner-poster-background_1142-12939.jpg);
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./Images/jason-leung-M55JcA9wOG0-unsplash.jpg); */
   height: 50vh;
   background-position: bottom;
@@ -104,7 +124,7 @@ button {
 }
 
 .turqoise-text {
-  color: rgb(49, 188, 196);
+  color: rgb(234, 174, 20);
 }
 
 .purple-text {
@@ -203,31 +223,31 @@ p {
 
 .first-grid-item {
   padding: 20px;
-  background-color: rgba(240, 126, 230, 100);
+  background-color: rgb(234, 114, 206);
   grid-column: span 4;
 }
 
 .second-grid-item {
   padding: 20px;
-  background-color: rgb(96, 204, 188);
+  background-color: rgb(111, 200, 210);
   grid-column: span 1;
 }
 
 .third-grid-item {
   padding: 20px;
-  background-color: rgb(242, 214, 100);
+  background-color: rgb(242, 211, 72);
   grid-column: span 1;
 }
 
 .fourth-grid-item {
   padding: 20px;
-  background-color: rgb(155, 108, 212);
+  background-color: rgb(166, 112, 231);
   grid-column: span 1;
 }
 
 .fifth-grid-item {
   padding: 20px;
-  background-color: rgb(92, 155, 210);
+  background-color: rgb(88, 90, 229);
   grid-column: span 1;
 }
 
@@ -273,35 +293,58 @@ footer p {
   }
 
   .heading {
-    font-size: 16px;
+    font-size: 18px;
   }
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu{
+    margin: 8px;
+  }
+
 }
 
 
 /* Media Querie Mobile Device */
 
 @media (min-width: 321px) and (max-width: 768px) {
-  .small-grid-item:nth-child(2) {
-    grid-column: 1 / 3;
+  
+  .grid-parent {
+    grid-template-columns: 1fr;
   }
 
-  .small-grid-item:nth-child(3) {
-    grid-column: 3 / 5;
-  }
-
-  .small-grid-item:nth-child(4) {
-    grid-column: 1 / 3;
-  }
-
-  .small-grid-item:nth-child(5) {
-    grid-column: 3 / 5;
+  .grid {
+    grid-column: 1;
   }
 
   .heading {
-    font-size: 18px;
+    font-size: 20px;
+    margin: 80px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu{
+    margin: 8px;
   }
 }
 
+@media screen and (min-width: 768px) {
+
+
+  }
 
 /* Media Querie Tablet Device */
 
@@ -310,33 +353,41 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .large-grid-item {
+  .first-grid-item {
     grid-column: 1 / 4;
   }
 
-  .small-grid-item:nth-child(2) {
+  .second-grid-item {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
   }
 
-  .small-grid-item:nth-child(3) {
+  .third-grid-item {
     grid-column: 1 / 2;
   }
 
-  .small-grid-item:nth-child(4) {
-    grid-column: 2 / 4;
+  .fourth-grid-item {
+    grid-column: 2 / 5;
   }
 
-  .small-grid-item:nth-child(5) {
-    grid-column: 1 / 5;
-  }
-
-  .small-grid-item:nth-child(5) {
+  .fifth-grid-item {
     grid-column: 1 / 5;
   }
 
   .heading {
     font-size: 20px;
+  }
+
+  .navigation {
+    display: none;
+  }
+  
+  button {
+    display: none;
+  }
+
+  .hamburger-menu{
+    margin: 8px;
   }
 }
 
@@ -347,6 +398,10 @@ footer p {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 
@@ -355,6 +410,10 @@ footer p {
 @media (min-width: 1280px) {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 }
 
