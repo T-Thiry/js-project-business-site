@@ -26,13 +26,16 @@ header {
 
 .logo {
   color: #fff;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 li,
 a {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
+  font-weight: bold;
   letter-spacing: 0.1rem;
   color: white;
   /* gives the text this color */
@@ -60,8 +63,8 @@ button {
   border-radius: 8px;
   border: none;
   font-size: 1rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   letter-spacing: 0.1rem;
 }
 
@@ -72,7 +75,7 @@ button {
 
 .menu-line {
   width: 1.5rem;
-  height: 2px;
+  height: 2.3px;
   margin-bottom: 0.3rem;
   background-color: #fff;
 }
@@ -298,7 +301,7 @@ footer p {
 
 /* Media Querie Mobile Device */
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 480px) {
 
   .grid-parent {
     grid-template-columns: 1fr;
@@ -330,11 +333,9 @@ footer p {
   }
 }
 
-@media screen and (min-width: 768px) {}
-
 /* Media Querie Tablet Device */
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -375,19 +376,21 @@ footer p {
   .hamburger-menu {
     margin: 8px;
   }
+  
 }
 
 
 /* Media Querie Desktop Device */
 
-@media (min-width: 992px) and (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1800px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .hamburger-menu {
     display: none;
   }
+  
 }
 
 
@@ -400,6 +403,14 @@ footer p {
 
   .hamburger-menu {
     display: none;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
   }
 }
 
