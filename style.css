@@ -9,7 +9,8 @@ body {
 }
 
 
-/* --------- The navigation bar starts here ---------- */
+/* -- Navbar -- */
+
 header {
   background-color: #2e2e2e;
   display: flex;
@@ -22,7 +23,7 @@ header {
   padding: 0 5%;
   /* pushes the items inwards left and right */
 }
- 
+
 .logo {
   color: #fff;
   font-size: 1.2rem;
@@ -71,16 +72,14 @@ button {
 
 .menu-line {
   width: 1.5rem;
-  height: 1px;
-  margin-bottom: 0.5rem;
-  fill: #dcd1b4;
-  background-color: #dcd1b4;
+  height: 2px;
+  margin-bottom: 0.3rem;
+  background-color: #fff;
 }
 
-/* ---------- The navigation bar ends here ---------- */
 
+/* --- Hero section -- */
 
-/* ---------- The hero section starts here ---------- */
 .hero {
   display: flex;
   flex-direction: column;
@@ -102,40 +101,33 @@ button {
 }
 
 .hero-heading {
-  font-size: 2.6rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.4rem;
 }
 
-.hero-text {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
-  font-weight: normal;
-}
 
-/* ---------- The hero section ends here ---------- */
+/* -- Page Title (Heading 2) starts here -- */
 
-
-/* ---------- Page Title (Heading 1) starts here ---------- */
 .heading {
   color: #252525;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
   margin: 100px;
 }
 
-.turqoise-text {
+.highlighted-orange-text {
   color: rgb(234, 174, 20);
 }
 
-.purple-text {
+.highlighted-purple-text {
   color: rgb(152, 65, 214);
 }
 
-/* ---------- Heading 1 ends here ---------- */
 
+/* -- User Reviews -- */
 
-
-/* ----- Article (User Reviews) starts here ----- */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(autofit, minmax (200px, 1fr));
@@ -196,11 +188,9 @@ p {
   font-weight: normal;
 }
 
-/* ----- Article (User Reviews) ends here ----- */
 
+/* -- Events -- */
 
-
-/* ---------- Grid starts here ---------- */
 .grid-parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -258,7 +248,7 @@ img {
   border-radius: 50%;
 }
 
-/* ---------- Footer starts here ---------- */
+/* -- Footer -- */
 
 #footer {
   background-color: #252525;
@@ -275,13 +265,8 @@ footer p {
   text-align: center;
 }
 
-/* ---------- Footer ends here ---------- */
 
-
-
-/* ------------------ Media Queries ------------------ */
-
-/* Media Querie Up To 320px */
+/* -- Media Queries -- */
 
 @media(max-width: 320px) {
   .grid-parent {
@@ -304,7 +289,7 @@ footer p {
     display: none;
   }
 
-  .hamburger-menu{
+  .hamburger-menu {
     margin: 8px;
   }
 
@@ -314,7 +299,7 @@ footer p {
 /* Media Querie Mobile Device */
 
 @media (min-width: 321px) and (max-width: 768px) {
-  
+
   .grid-parent {
     grid-template-columns: 1fr;
   }
@@ -336,15 +321,16 @@ footer p {
     display: none;
   }
 
-  .hamburger-menu{
+  .hamburger-menu {
     margin: 8px;
+  }
+
+  .hero-heading {
+    font-size: 1.8rem;
   }
 }
 
-@media screen and (min-width: 768px) {
-
-
-  }
+@media screen and (min-width: 768px) {}
 
 /* Media Querie Tablet Device */
 
@@ -381,12 +367,12 @@ footer p {
   .navigation {
     display: none;
   }
-  
+
   button {
     display: none;
   }
 
-  .hamburger-menu{
+  .hamburger-menu {
     margin: 8px;
   }
 }
