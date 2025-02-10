@@ -304,6 +304,7 @@ footer p {
 @media (min-width: 320px) and (max-width: 480px) {
 
   .grid-parent {
+    margin-top: 100px;
     grid-template-columns: 1fr;
   }
 
@@ -313,7 +314,7 @@ footer p {
 
   .heading {
     font-size: 20px;
-    margin: 80px;
+    margin: 100px;
   }
 
   .navigation {
@@ -330,6 +331,10 @@ footer p {
 
   .hero-heading {
     font-size: 1.8rem;
+  }
+
+  #footer {
+    margin-top: 100px;
   }
 }
 
@@ -351,10 +356,15 @@ footer p {
 
   .heading {
     font-size: 20px;
+    margin: 150px;
   }
 
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-parent {
+    margin-top: 150px;
   }
 
   .first-grid-item {
@@ -377,6 +387,10 @@ footer p {
   .fifth-grid-item {
     grid-column: 1 / 5;
   }
+
+  #footer {
+    margin-top: 100px;
+  }
 }
 
 
@@ -388,8 +402,16 @@ footer p {
     display: none;
   }
 
+  .heading {
+    margin: 150px;
+  }
+
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-parent {
+    margin-top: 150px;
   }
 
   .first-grid-item {
@@ -432,8 +454,16 @@ footer p {
     font-size: 1.2rem;
   }
 
+  .heading {
+    margin: 150px;
+  }
+
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-parent {
+    margin-top: 150px;
   }
 }
 
