@@ -86,7 +86,7 @@ button {
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/rounded-lines-edge-background-creative-lines-business-brochure-banner-poster-background_1142-12939.jpg);
+  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./Images/jason-leung-M55JcA9wOG0-unsplash.jpg); */
   height: 50vh;
   background-position: bottom;
@@ -104,8 +104,14 @@ button {
 }
 
 .hero-heading {
+  background-color: #282934;
+  border-radius: 50%;
+  padding: 0 50px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.4rem;
+  /* Text Shadow Property */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(198, 82, 231);
 }
 
 
@@ -197,6 +203,7 @@ img {
   border: 2px solid rgb(177, 115, 225);
   border-radius: 50%;
 }
+
 
 /* -- Events -- */
 
@@ -303,15 +310,6 @@ footer p {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-  .grid-parent {
-    margin-top: 100px;
-    grid-template-columns: 1fr;
-  }
-
-  .grid {
-    grid-column: 1;
-  }
-
   .heading {
     font-size: 20px;
     margin: 100px;
@@ -329,8 +327,21 @@ footer p {
     margin: 8px;
   }
 
+  .hero {
+    height: 100vh;
+  }
+
   .hero-heading {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+
+  .grid-parent {
+    margin-top: 100px;
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-column: 1;
   }
 
   #footer {
@@ -402,6 +413,11 @@ footer p {
     display: none;
   }
 
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+
   .heading {
     margin: 150px;
   }
@@ -447,7 +463,7 @@ footer p {
   }
 
   .hero-heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .hero-text {
