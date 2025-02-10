@@ -191,6 +191,12 @@ p {
   font-weight: normal;
 }
 
+img {
+  width: 54px;
+  height: 54px;
+  border: 2px solid rgb(177, 115, 225);
+  border-radius: 50%;
+}
 
 /* -- Events -- */
 
@@ -244,12 +250,6 @@ p {
   grid-column: span 1;
 }
 
-img {
-  width: 54px;
-  height: 54px;
-  border: 2px solid rgb(177, 115, 225);
-  border-radius: 50%;
-}
 
 /* -- Footer -- */
 
@@ -272,17 +272,6 @@ footer p {
 /* -- Media Queries -- */
 
 @media(max-width: 320px) {
-  .grid-parent {
-    grid-template-columns: 1fr;
-  }
-
-  .grid {
-    grid-column: 1;
-  }
-
-  .heading {
-    font-size: 18px;
-  }
 
   .navigation {
     display: none;
@@ -296,6 +285,17 @@ footer p {
     margin: 8px;
   }
 
+  .heading {
+    font-size: 18px;
+  }
+
+  .grid-parent {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-column: 1;
+  }
 }
 
 
@@ -336,6 +336,23 @@ footer p {
 /* Media Querie Tablet Device */
 
 @media (min-width: 481px) and (max-width: 1024px) {
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin: 8px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -360,35 +377,19 @@ footer p {
   .fifth-grid-item {
     grid-column: 1 / 5;
   }
-
-  .heading {
-    font-size: 20px;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  button {
-    display: none;
-  }
-
-  .hamburger-menu {
-    margin: 8px;
-  }
-  
 }
 
 
 /* Media Querie Desktop Device */
 
 @media (min-width: 1024px) and (max-width: 1800px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   .hamburger-menu {
     display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .first-grid-item {
@@ -411,16 +412,13 @@ footer p {
   .fifth-grid-item {
     grid-column: 1 / 5;
   }
-  
+
 }
 
 
 /* Media Querie Large Desktop Device */
 
 @media (min-width: 1280px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   .hamburger-menu {
     display: none;
@@ -432,6 +430,10 @@ footer p {
 
   .hero-text {
     font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
