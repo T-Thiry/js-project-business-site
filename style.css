@@ -5,12 +5,11 @@
 }
 
 body {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 
-/* -- Navbar -- */
-
+/* -- Navbar starts here -- */
 header {
   background-color: #2e2e2e;
   display: flex;
@@ -25,7 +24,7 @@ header {
 }
 
 .logo {
-  color: #fff;
+  color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.2rem;
   font-weight: bold;
@@ -37,27 +36,23 @@ a {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  color: white;
-  /* gives the text this color */
+  color: #ffffff;
   text-decoration: none;
-  /* removes the underline */
 }
 
 .nav-links {
   list-style: none;
-  /* remove bullet points */
 }
 
 .nav-links li {
   display: inline-block;
   /* puts the items in a line/row */
   margin: 0 20px;
-  /* space between the items */
 }
 
 button {
-  background-color: rgb(198, 82, 231);
-  color: white;
+  background-color: #c652e7;
+  color: #ffffff;
   padding: 6px 18px;
   margin: 10px 0;
   border-radius: 8px;
@@ -77,17 +72,17 @@ button {
   width: 1.5rem;
   height: 2.3px;
   margin-bottom: 0.3rem;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
+/* -- Navbar ends here -- */
 
-/* --- Hero section -- */
 
+/* --- Hero section starts here -- */
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./Images/jason-leung-M55JcA9wOG0-unsplash.jpg); */
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
   height: 50vh;
   background-position: bottom;
   align-self: center;
@@ -98,51 +93,27 @@ button {
   justify-content: center;
 }
 
-.text {
-  text-align: center;
-  color: white;
-}
-
 .hero-heading {
-  background-color: #282934;
-  border-radius: 50%;
-  padding: 0 50px;
+  color: #ffffff;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.4rem;
-  /* Text Shadow Property */
+  /* Text Shadow Property
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(198, 82, 231);
+  -webkit-text-stroke-color: rgb(198, 82, 231); */
 }
 
-
-/* -- Page Title (Heading 2) starts here -- */
-
-.heading {
-  color: #252525;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  text-align: center;
-  margin: 100px;
-}
-
-.highlighted-orange-text {
-  color: rgb(234, 174, 20);
-}
-
-.highlighted-purple-text {
-  color: rgb(152, 65, 214);
-}
+/* --- Hero section endss here -- */
 
 
-/* -- User Reviews -- */
-
+/* -- User reviews starts here -- */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(autofit, minmax (200px, 1fr));
   padding: 0 5%;
   /* 5% padding to make the cards move a bit inwards */
   gap: 20px;
+  margin-top: 200px;
 }
 
 article {
@@ -161,7 +132,7 @@ article {
 .fourth-review,
 .fifth-review {
   background-color: hsl(217, 19%, 35%);
-  color: #fff;
+  color: #ffffff;
 }
 
 .card-header {
@@ -204,9 +175,31 @@ img {
   border-radius: 50%;
 }
 
+/* -- User reviews ends here -- */
 
-/* -- Events -- */
 
+/* -- Welcoming text on landing page starts here -- */
+.heading {
+  color: #252525;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 100px;
+}
+
+.highlighted-orange-text {
+  color: #eaae14;
+}
+
+.highlighted-purple-text {
+  color: #c652e7;
+}
+
+/* -- Welcoming text on landing page ends here -- */
+
+
+/* -- Events start here-- */
 .grid-parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -257,12 +250,13 @@ img {
   grid-column: span 1;
 }
 
+/* -- Events ends here-- */
 
-/* -- Footer -- */
 
+/* -- Footer starts here -- */
 #footer {
   background-color: #252525;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 20px 0;
   margin-top: 180px;
@@ -270,15 +264,15 @@ img {
 
 footer p {
   background-color: #252525;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   text-align: center;
 }
 
+/* -- Footer ends here -- */
 
 
 /* -- Media Queries -- */
-
 @media(max-width: 320px) {
 
   .navigation {
@@ -415,7 +409,7 @@ footer p {
   }
 
   .hero-heading {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
 
@@ -464,7 +458,7 @@ footer p {
   }
 
   .hero-heading {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
 
   .hero-text {

@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+/* -- Navbar starts here -- */
+header {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.logo {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+li,
+a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  /* puts the items in a line/row */
+  margin: 0 20px;
+}
+
+button {
+  background-color: #c652e7;
+  color: #ffffff;
+  padding: 6px 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-line {
+  width: 1.5rem;
+  height: 2.3px;
+  margin-bottom: 0.3rem;
+  background-color: #ffffff;
+}
+
+/* -- Navbar ends here -- */
+
+
+/* --- Hero section starts here -- */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+.video-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero-heading {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* --- Hero section ends here -- */
+
+
+/* -- Welcoming text starts here -- */
+.heading {
+  color: #252525;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 100px;
+}
+
+.highlighted-orange-text {
+  color: #eaae14;
+}
+
+.highlighted-purple-text {
+  color: #c652e7;
+}
+
+/* -- Welcoming text ends here -- */
+
+
+/* -- Footer -- */
+#footer {
+  background-color: #252525;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 180px;
+}
+
+footer p {
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/* -- Media Queries -- */
+
+@media(max-width: 320px) {
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin: 8px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+}
+
+/* Media Querie Mobile Device */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .heading {
+    font-size: 20px;
+    margin: 100px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin: 8px;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+    margin: 0 6px;
+  }
+}
+
+#footer {
+  margin-top: 100px;
+}
+
+
+/* Media Querie Tablet Device */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  .navigation {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin: 8px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin: 150px;
+  }
+
+  #footer {
+    margin-top: 100px;
+  }
+}
+
+/* Media Querie Desktop Device */
+
+@media (min-width: 1024px) and (max-width: 1800px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: 2.8rem;
+  }
+
+  .heading {
+    margin: 150px;
+  }
+
+}
+
+/* Media Querie Large Desktop Device */
+
+@media (min-width: 1280px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: 2.8rem;
+  }
+
+  .heading {
+    margin: 150px;
+  }
+
+}
