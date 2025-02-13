@@ -253,6 +253,29 @@ img {
 /* -- Events ends here-- */
 
 
+/* -- Newsletter starts here-- */
+.newsletter {
+  background-color: aquamarine;
+  width: 90%;
+  margin: 150px auto;
+  background-image: linear-gradient(rgba(48, 59, 75, 0.9), rgba(48, 59, 75, 0.9)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px;
+}
+
+.newsletter h1 {
+color: #ffffff;
+font-family: 'Courier New', Courier, monospace;
+margin-bottom:  40px;
+padding: 0;
+}
+
+
+/* -- Newsletter ends here-- */
+
 /* -- Footer starts here -- */
 #footer {
   background-color: #252525;
