@@ -19,7 +19,7 @@ header {
   align-items: center;
   /* center the items vertically */
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 10%;
   /* pushes the items inwards left and right */
 }
 
@@ -98,19 +98,57 @@ button {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.4rem;
-  /* Text Shadow Property
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(198, 82, 231); */
 }
 
-/* --- Hero section endss here -- */
+/* --- Hero section ends here -- */
+
+
+/* Events starts here */
+.event-container {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax (200px, 1fr));
+  margin: 150px 10% 0 10%;
+  gap: 20px;
+}
+
+.event-card-header {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+}
+
+.first-event,
+.second-event {
+  background-color: hsl(217, 19%, 35%);
+  color: #ffffff;
+  padding: 25px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.first-event {
+  grid-column: 1 / 3;
+}
+
+.second-event {
+  grid-column: 3 / 5;
+}
+
+.event-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+/* Events ends here */
 
 
 /* -- User reviews starts here -- */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(autofit, minmax (200px, 1fr));
-  padding: 0 5%;
+  margin: 0 10%;
   /* 5% padding to make the cards move a bit inwards */
   gap: 20px;
 }
@@ -128,8 +166,7 @@ article {
 .first-review,
 .second-review,
 .third-review,
-.fourth-review,
-.fifth-review {
+.fourth-review {
   background-color: hsl(217, 19%, 35%);
   color: #ffffff;
 }
@@ -167,7 +204,7 @@ p {
   font-weight: normal;
 }
 
-img {
+.review-image {
   width: 54px;
   height: 54px;
   border: 2px solid rgb(177, 115, 225);
@@ -179,9 +216,9 @@ img {
 
 /* -- Newsletter starts here-- */
 .newsletter {
-  width: 90%;
+
   padding: 100px;
-  margin: 100px auto;
+  margin: 100px 10% 100px 10%;
   background-image: linear-gradient(rgba(95, 65, 170, 0.5), rgba(48, 59, 75, 0.5)), url(./Images/gradient-abstract-background.jpg);
   background-position: center;
   background-size: cover;
@@ -251,6 +288,10 @@ footer p {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+  header {
+    padding: 0 5%;
+  }
+
   .navigation {
     display: none;
   }
@@ -274,25 +315,84 @@ footer p {
   }
 
   .hero-heading {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  .event-container {
+    grid-template-columns: 1fr;
+    margin: 100px 5% 0 5%;
+  }
+
+  .first-event,
+  .second-event {
+    grid-column: 1;
+    padding: 20px;
+  }
+
+  .event-image {
+    height: auto;
+  }
+
+  .first-event h3,
+  .second-event h3 {
+    font-size: 1rem;
+  }
+
+  .first-event p,
+  .second-event p {
+    font-size: 0.8rem;
   }
 
   .grid-container {
     margin-top: 100px;
+    margin: 100px 5% 0 5%;
+  }
+
+  .first-review h3,
+  .second-review h3,
+  .third-review h3,
+  .fourth-review h3 {
+    font-size: 1rem;
+  }
+
+  .first-review h4,
+  .second-review h4,
+  .third-review h4,
+  .fourth-review h4 {
+    font-size: 0.8rem;
+  }
+
+  .first-review p,
+  .second-review p,
+  .third-review p,
+  .fourth-review p {
+    font-size: 0.8rem;
+  }
+
+  .newsletter {
+    margin: 100px 5% 0 5%;
   }
 
   .newsletter h1 {
     font-size: 1rem;
   }
 
+  #footer {
+    margin-top: 100px;
+  }
+
+  #footer a,
   #footer p {
-    font-size: 13px;
+    font-size: 0.8rem;
   }
 }
 
 /* Media Querie Tablet Device */
 
 @media (min-width: 481px) and (max-width: 1024px) {
+  header {
+    padding: 0 5%;
+  }
 
   .navigation {
     display: none;
@@ -306,13 +406,80 @@ footer p {
     margin: 8px;
   }
 
+  .menu-line {
+    width: 1.2rem;
+    height: 2px;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-heading {
+    font-size: 1.6rem;
+  }
+
+  .event-container {
+    margin: 100px 5% 0 5%;
+  }
+
+  .event-image {
+    height: auto;
+  }
+
+  .first-event,
+  .second-event {
+    padding: 20px;
+  }
+
+  .first-event h3,
+  .second-event h3 {
+    font-size: 1.2rem;
+  }
+
+  .first-event p,
+  .second-event p {
+    font-size: 1rem;
+  }
+
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 100px;
+    margin: 100px 5% 0 5%;
+  }
+
+  .first-review h3,
+  .second-review h3,
+  .third-review h3,
+  .fourth-review h3 {
+    font-size: 1.2rem;
+  }
+
+  .first-review h4,
+  .second-review h4,
+  .third-review h4,
+  .fourth-review h4 {
+    font-size: 1rem;
+  }
+
+  .first-review p,
+  .second-review p,
+  .third-review p,
+  .fourth-review p {
+    font-size: 1rem;
+  }
+
+  .newsletter {
+    margin: 100px 5% 0 5%;
   }
 
   .newsletter h1 {
     font-size: 1.2rem;
+  }
+
+  #footer {
+    margin-top: 100px;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 1rem;
   }
 }
 
@@ -321,21 +488,83 @@ footer p {
 
 @media (min-width: 1024px) and (max-width: 1800px) {
 
+  li,
+  a {
+    font-size: 1rem;
+  }
+
   .hamburger-menu {
     display: none;
   }
 
   .hero-heading {
-    font-size: 2.8rem;
+    font-size: 2rem;
+  }
+
+  .event-container {
+    margin: 100px 5% 0 5%;
+  }
+
+  .event-image {
+    height: 240px;
+  }
+
+  .first-event,
+  .second-event {
+    padding: 20px;
+  }
+
+  .first-event h3,
+  .second-event h3 {
+    font-size: 1.2rem;
+  }
+
+  .first-event p,
+  .second-event p {
+    font-size: 1rem;
   }
 
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 150px;
+    margin: 100px 5% 0 5%;
+  }
+
+  .first-review h3,
+  .second-review h3,
+  .third-review h3,
+  .fourth-review h3 {
+    font-size: 1.2rem;
+  }
+
+  .first-review h4,
+  .second-review h4,
+  .third-review h4,
+  .fourth-review h4 {
+    font-size: 1rem;
+  }
+
+  .first-review p,
+  .second-review p,
+  .third-review p,
+  .fourth-review p {
+    font-size: 1rem;
+  }
+
+  .newsletter {
+    margin: 100px 5% 0 5%;
   }
 
   .newsletter h1 {
     font-size: 1.4rem;
+  }
+
+  #footer {
+    margin-top: 100px;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 1rem;
   }
 }
 
@@ -343,26 +572,71 @@ footer p {
 /* Media Querie Large Desktop Device */
 
 @media (min-width: 1280px) {
+  li,
+  a {
+    font-size: 1.2rem;
+  }
 
   .hamburger-menu {
     display: none;
   }
 
   .hero-heading {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 
-  .hero-text {
+  .event-container {
+    margin: 150px 5% 0 5%;
+  }
+
+  .event-image {
+    height: 320px;
+  }
+
+  .first-event h3,
+  .second-event h3 {
+    font-size: 1.4rem;
+  }
+
+  .first-event p,
+  .second-event p {
     font-size: 1.2rem;
   }
 
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 150px;
+    margin: 150px 5% 0 5%;
+  }
+
+  .first-review h4,
+  .second-review h4,
+  .third-review h4,
+  .fourth-review h4 {
+    font-size: 1.2rem;
+  }
+
+  .first-review p,
+  .second-review p,
+  .third-review p,
+  .fourth-review p {
+    font-size: 1.2rem;
+  }
+
+  .newsletter {
+    margin: 150px 5% 0 5%;
   }
 
   .newsletter h1 {
     font-size: 1.6rem;
+  }
+
+  #footer {
+    margin-top: 150px;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 1.2rem;
   }
 }
 
