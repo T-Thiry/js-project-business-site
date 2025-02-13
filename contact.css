@@ -82,7 +82,7 @@ button {
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
   height: 50vh;
   background-position: bottom;
   align-self: center;
