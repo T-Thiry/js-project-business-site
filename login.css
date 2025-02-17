@@ -86,7 +86,7 @@ button {
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/2205_w037_n003_394b_p1_394.jpg);
+  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/teamwork.jpg);
   height: 50vh;
   background-position: bottom;
   align-self: center;
@@ -132,6 +132,63 @@ button {
 .highlighted-purple-text {
   color: rgb(152, 65, 214);
 }
+
+
+/* -- Contact Form starts here -- */
+.signup-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup {
+  display: flex;
+  height: 70vh;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.form {
+  background-color: #272850;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 60px 4%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+
+.form input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: unset;
+  color: #ffffff;
+}
+
+
+.form input:not(:first-child),
+.form textarea,
+.form button {
+  margin-top: 0.8rem;
+}
+
+
+
+.form button {
+  margin-top: 30px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+/* -- Contact Form ends here -- */
 
 
 /* -- Footer -- */
@@ -239,7 +296,7 @@ button {
 
 @media(max-width: 320px) {
 
-  .navigation {
+  .navbar {
     display: none;
   }
 
@@ -266,7 +323,7 @@ button {
     margin: 100px;
   }
 
-  .navigation {
+  .navbar {
     display: none;
   }
 
@@ -295,7 +352,7 @@ button {
 
 @media (min-width: 481px) and (max-width: 1024px) {
 
-  .navigation {
+  .navbar {
     display: none;
   }
 

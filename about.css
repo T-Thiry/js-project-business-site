@@ -12,14 +12,10 @@ body {
 header {
   background-color: #2e2e2e;
   display: flex;
-  /* use flexbox for horizontal layout */
   justify-content: center;
-  /* center the items */
   align-items: center;
-  /* center the items vertically */
   justify-content: space-between;
   padding: 0 5%;
-  /* pushes the items inwards left and right */
 }
 
 .logo {
@@ -29,25 +25,27 @@ header {
   font-weight: bold;
 }
 
-li,
-a {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-links {
+.navbar {
+  display: flex;
+  width: 100%;
   list-style: none;
-}
+  justify-content: space-evenly; 
+  }
 
-.nav-links li {
-  display: inline-block;
-  /* puts the items in a line/row */
-  margin: 0 20px;
-}
+  .navbar ul {
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    margin: 0 20px;
+  }
+
 
 button {
   background-color: #c652e7;
@@ -201,7 +199,7 @@ footer p {
 /* -- Media Queries start here -- */
 @media(max-width: 320px) {
 
-  .navigation {
+  .navbar {
     display: none;
   }
 
@@ -232,7 +230,7 @@ footer p {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-  .navigation {
+  .navbar {
     display: none;
   }
 
@@ -281,7 +279,7 @@ footer p {
 
 @media (min-width: 481px) and (max-width: 1024px) {
 
-  .navigation {
+  .navbar {
     display: none;
   }
 
