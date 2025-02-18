@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  ;
 }
 
 body {
@@ -9,31 +11,40 @@ body {
 }
 
 
-/* -- Navbar -- */
-
+/* This is my header */
 header {
   background-color: #2e2e2e;
   display: flex;
-  /* use flexbox for horizontal layout */
   justify-content: center;
-  /* center the items */
   align-items: center;
-  /* center the items vertically */
   justify-content: space-between;
   padding: 0 5%;
-  /* pushes the items inwards left and right */
 }
 
 .logo {
   color: #ffffff;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+.navbar {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
 li,
 a {
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
@@ -41,29 +52,16 @@ a {
   text-decoration: none;
 }
 
-.nav-links {
-  list-style: none;
-  /* remove bullet points */
-}
-
-.nav-links li {
-  display: inline-block;
-  /* puts the items in a line/row */
-  margin: 0 20px;
-  /* space between the items */
-}
-
 button {
   background-color: #c652e7;
   color: #ffffff;
-  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 10px 20px;
   margin: 10px 0;
   border-radius: 8px;
   border: none;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
 }
 
 .hamburger-menu {
@@ -78,30 +76,24 @@ button {
   background-color: #ffffff;
 }
 
-/* --- Hero section -- */
+
+/* This is my hero section */
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
   height: 50vh;
-  background-position: bottom;
-  align-self: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
   background-size: cover;
-  /* background-attachment: fixed; */
-  align-items: center;
+  background-position: bottom;
   justify-content: center;
-}
-
-.hero-heading {
+  align-items: center;
+  font-size: 2.4rem;
   color: #ffffff;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2.4rem;
 }
 
 
-/* -- Contact Form starts here -- */
+/* This is my contact section */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -110,8 +102,8 @@ button {
 
 .contact {
   display: flex;
-  height: 70vh;
-  width: 70vw;
+  height: 60vh;
+  width: 60vw;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -135,8 +127,11 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 60px 4%;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
+}
+
+.form h2 {
+  margin-bottom: 20px;
 }
 
 .form input {
@@ -174,10 +169,8 @@ button {
   cursor: pointer;
 }
 
-/* -- Contact Form ends here -- */
 
-
-/* -- Footer starts here -- */
+/* This is my footer section */
 #footer {
   background-color: #252525;
   color: #ffffff;
@@ -185,35 +178,15 @@ button {
   padding: 20px 0;
 }
 
-footer p {
+#footer p {
   background-color: #252525;
   color: #ffffff;
   font-size: 1rem;
   text-align: center;
 }
 
-/* -- Footer ends here -- */
-
-
-/* -- Media Queries -- */
-@media(max-width: 320px) {
-
-  .navbar {
-    display: none;
-  }
-
-  button {
-    display: none;
-  }
-
-  .hamburger-menu {
-    margin: 8px;
-  }
-
-}
 
 /* Media Querie Mobile Device */
-
 @media (min-width: 320px) and (max-width: 480px) {
 
   .navbar {
@@ -253,7 +226,6 @@ footer p {
 }
 
 /* Media Querie Tablet Device */
-
 @media (min-width: 481px) and (max-width: 1024px) {
 
   .navbar {
@@ -275,7 +247,7 @@ footer p {
   }
 
   .hero-heading {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   #footer {
@@ -285,11 +257,11 @@ footer p {
   #footer a,
   #footer p {
     font-size: 1rem;
+    margin: 16px 0;
   }
 }
 
 /* Media Querie Desktop Device */
-
 @media (min-width: 1024px) and (max-width: 1800px) {
 
   li,
@@ -312,11 +284,11 @@ footer p {
   #footer a,
   #footer p {
     font-size: 1rem;
+    margin: 16px 0;
   }
 }
 
 /* Media Querie Large Desktop Device */
-
 @media (min-width: 1280px) {
 
   li,
@@ -339,5 +311,6 @@ footer p {
   #footer a,
   #footer p {
     font-size: 1.2rem;
+    margin: 20px 0;
   }
 }

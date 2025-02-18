@@ -72,8 +72,6 @@ button {
   background-color: #ffffff;
 }
 
-/* -- Navbar ends here -- */
-
 
 /* --- Hero section starts here -- */
 .hero {
@@ -85,7 +83,6 @@ button {
   align-self: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   align-items: center;
   justify-content: center;
 }
@@ -95,9 +92,6 @@ button {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.4rem;
-  /* Text Shadow Property
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(198, 82, 231); */
 }
 
 /* --- Hero section endss here -- */
@@ -227,7 +221,6 @@ footer p {
 
 
 /* Media Querie Mobile Device */
-
 @media (min-width: 320px) and (max-width: 480px) {
 
   .navbar {
@@ -276,7 +269,6 @@ footer p {
 }
 
 /* Media Querie Tablet Device */
-
 @media (min-width: 481px) and (max-width: 1024px) {
 
   .navbar {
@@ -324,7 +316,6 @@ footer p {
 
 
 /* Media Querie Desktop Device */
-
 @media (min-width: 1024px) and (max-width: 1800px) {
 
   .hamburger-menu {
@@ -367,7 +358,6 @@ footer p {
 
 
 /* Media Querie Large Desktop Device */
-
 @media (min-width: 1280px) {
 
   .hamburger-menu {
@@ -390,11 +380,3 @@ footer p {
     margin-top: 150px;
   }
 }
-
-/*
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-*/

@@ -2,70 +2,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  ;
 }
 
 body {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 
-/* -- Navbar -- */
-
+/* This is my header */
 header {
   background-color: #2e2e2e;
   display: flex;
-  /* use flexbox for horizontal layout */
   justify-content: center;
-  /* center the items */
   align-items: center;
-  /* center the items vertically */
   justify-content: space-between;
   padding: 0 5%;
-  /* pushes the items inwards left and right */
 }
 
 .logo {
-  color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-li,
-a {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  color: white;
-  /* gives the text this color */
-  text-decoration: none;
-  /* removes the underline */
+.navbar {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-evenly;
 }
 
 .nav-links {
   list-style: none;
-  /* remove bullet points */
 }
 
 .nav-links li {
   display: inline-block;
-  /* puts the items in a line/row */
   margin: 0 20px;
-  /* space between the items */
+}
+
+li,
+a {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 button {
-  background-color: rgb(198, 82, 231);
-  color: white;
-  padding: 6px 18px;
+  background-color: #c652e7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 10px 20px;
   margin: 10px 0;
   border-radius: 8px;
   border: none;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
 }
 
 .hamburger-menu {
@@ -77,64 +73,27 @@ button {
   width: 1.5rem;
   height: 2.3px;
   margin-bottom: 0.3rem;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 
-/* --- Hero section -- */
-
+/* This is my hero section */
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(93, 93, 93, 0.3), rgba(93, 93, 93, 0.3)), url(./Images/teamwork.jpg);
   height: 50vh;
-  background-position: bottom;
-  align-self: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
   background-size: cover;
-  /* background-attachment: fixed; */
-  align-items: center;
+  background-position: bottom;
   justify-content: center;
-}
-
-.text {
-  text-align: center;
-  color: white;
-}
-
-.hero-heading {
-  background-color: #282934;
-  border-radius: 50%;
-  padding: 0 50px;
-  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
   font-size: 2.4rem;
-  /* Text Shadow Property */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(198, 82, 231);
-}
-
-
-/* -- Page Title (Heading 2) starts here -- */
-
-.heading {
-  color: #252525;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  color: #ffffff;
   text-align: center;
-  margin: 100px;
-}
-
-.highlighted-orange-text {
-  color: rgb(234, 174, 20);
-}
-
-.highlighted-purple-text {
-  color: rgb(152, 65, 214);
 }
 
 
-/* -- Contact Form starts here -- */
+/* -- This is my signup section-- */
 .signup-container {
   display: flex;
   justify-content: center;
@@ -147,6 +106,7 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+
 }
 
 .form {
@@ -170,14 +130,11 @@ button {
   color: #ffffff;
 }
 
-
 .form input:not(:first-child),
 .form textarea,
 .form button {
   margin-top: 0.8rem;
 }
-
-
 
 .form button {
   margin-top: 30px;
@@ -185,7 +142,6 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-
 
 
 /* -- Contact Form ends here -- */

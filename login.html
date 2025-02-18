@@ -14,56 +14,51 @@
 </head>
 
 <body>
-  <!--Navbar using Flexbox-->
+  <!-- This is my header -->
   <header>
     <a class="logo" href="index.html">HookITup</a>
     <nav class="navbar">
       <ul class="nav-links">
         <li><a href="#">Meetups</a></li>
-        <li><a href="hackathon.html">Hackaton</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
     <a class="cta" href="login.html"><button>Login</button></a>
 
-    <!-- Hamburger menu for mobile and tablet devices using Flexbox -->
     <div class="hamburger-menu">
       <span class="menu-line"></span>
       <span class="menu-line"></span>
       <span class="menu-line"></span>
     </div>
   </header>
-  <!-- Hero section using only picture and text-->
-  <div class="hero">
-    <div class="text">
-      <!-- <h1 class="hero-heading">Contact Us </h1> -->
+
+  <!-- This is my hero section -->
+  <section class="hero">
+    <h1 class="hero-heading">Let's build something<br>awesome together</h1>
+  </section>
+
+  <!-- This is my sign up section -->
+  <div class="signup-container">
+    <div class="signup">
+      <div class="form">
+        <h1>Sign up</h1>
+        <form action="http://httpbin.org/anything" method="POST">
+          <input type="text" placeholder="Enter email" name="email" required>
+          <input type="psw" placeholder="Enter password" name="psw" required>
+          <input type="password" placeholder="Repeat password" required>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+          <p class="terms">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+              Privacy</a></p>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 
-  <!-- Heading 2 on Contact Us -->
-  <h2 class="heading"><span class="highlighted-orange-text">Stay Updated!</span>Subscribe to Our <span
-      class="highlighted-purple-text">Newsletter Today!</span></h1>
-
-    <!-- Signup form for the user to input data -->
-    <div class="signup-container">
-      <div class="signup">
-        <div class="form">
-          <h1>Sign up</h1>
-          <form action="#">
-            <input type="text" placeholder="Enter email" name="email" required>
-            <input type="psw" placeholder="Enter password" name="psw" required>
-            <input type="password" placeholder="Repeat password" required>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
-            <p class="terms">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></p>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Form Code along tuesday-->
-    <!-- 
+  <!-- Form Code along tuesday-->
+  <!-- 
   <section class="form-container">
     <h1 class="forms-text">Tickets to Hackaton</h1>
     <form action="http://httpbin.org/anything" method="POST">
@@ -89,38 +84,38 @@
     </form>
   </section>
   -->
-    <form action>
-      <h2 class="user-information">User Information</h2>
-      <fieldset>
-        <label>
-          <span class="username">Name</span>
-          <input type="text" name="name" placeholder="Jenny Rosen" required>
-        </label>
-        <label>
-          <span class="user-emailaddress">Email</span>
-          <input type="email" name="email" placeholder="jenny.rosen@gmail.com" required>
-        </label>
-        <label>
-          <span class="user-phonenumber">Phone</span>
-          <input type="phonenumber" name="phonenumber" placeholder="+46734445555" required>
-        </label>
-        <label>
-          <span class="user-postalcode">Postal Code</span>
-          <input type="text" name="postalCode" placeholder="416 54" required>
-        </label>
-        <label>
-          <span class="user-country">Country</span>
-          <select name="country">
-            <option value="sweden">Sweden</option>
-            <option value="sweden">Norway</option>
-            <option value="sweden">Denmark</option>
-            <option value="sweden">Finland</option>
-            <option value="sweden">Island</option>
-          </select>
-        </label>
-      </fieldset>
-      <button type="submit">Register</button>
-    </form>
+  <form action>
+    <h2 class="user-information">User Information</h2>
+    <fieldset>
+      <label>
+        <span class="username">Name</span>
+        <input type="text" name="name" placeholder="Jenny Rosen" required>
+      </label>
+      <label>
+        <span class="user-emailaddress">Email</span>
+        <input type="email" name="email" placeholder="jenny.rosen@gmail.com" required>
+      </label>
+      <label>
+        <span class="user-phonenumber">Phone</span>
+        <input type="phonenumber" name="phonenumber" placeholder="+46734445555" required>
+      </label>
+      <label>
+        <span class="user-postalcode">Postal Code</span>
+        <input type="text" name="postalCode" placeholder="416 54" required>
+      </label>
+      <label>
+        <span class="user-country">Country</span>
+        <select name="country">
+          <option value="sweden">Sweden</option>
+          <option value="sweden">Norway</option>
+          <option value="sweden">Denmark</option>
+          <option value="sweden">Finland</option>
+          <option value="sweden">Island</option>
+        </select>
+      </label>
+    </fieldset>
+    <button type="submit">Register</button>
+  </form>
 </body>
 
 </html>
