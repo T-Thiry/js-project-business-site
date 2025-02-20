@@ -203,7 +203,7 @@ height: auto;
 .newsletter {
   padding: 100px;
   margin: 100px 10% 100px 10%;
-  background-image: linear-gradient(rgba(95, 65, 170, 0.5), rgba(48, 59, 75, 0.5)), url(./Images/gradient-abstract-background.jpg);
+  background-image: linear-gradient(rgba(95, 65, 170, 0.5), rgba(48, 59, 75, 0.5)), url(./Images/Design.webp);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
@@ -221,6 +221,7 @@ height: auto;
   font-size: 1.2rem;
   cursor: pointer;
 }
+
 
 /* This is my footer section */
 #footer {
