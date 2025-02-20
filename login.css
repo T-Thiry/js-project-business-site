@@ -106,7 +106,6 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-
 }
 
 .form {
@@ -115,9 +114,13 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 60px 4%;
+  padding: 40px 8%;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
+}
+
+.form h1 {
+  margin-bottom: 40px;
 }
 
 .form input {
@@ -128,21 +131,57 @@ button {
   border-radius: 10px;
   background-color: unset;
   color: #ffffff;
+  margin: 4px 0 20px 0;
 }
 
-.form input:not(:first-child),
-.form textarea,
-.form button {
-  margin-top: 0.8rem;
+.sign-in-extras {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sign-in-extras div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.sign-in-extras a {
+  color: #c652e7;
+  font-size: 1rem;
 }
 
 .form button {
   margin-top: 30px;
-  padding: 12px 26px;
+  padding: 10px 26px;
   border-radius: 8px;
   cursor: pointer;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]) {
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 /* -- Contact Form ends here -- */
 
@@ -166,7 +205,7 @@ footer p {
 
 
 /* -- Form on page Contact Us-- */
-
+/*
 form {
   display: block;
   unicode-bidi: isolate;
@@ -176,7 +215,6 @@ form {
   border: 1px solid lightgrey;
   border-radius: 4px;
 }
-
 
 .user-information {
   font-family: "montserrat";
@@ -198,7 +236,6 @@ label {
   align-items: center;
   font-family: "montserrat";
   font-weight: 500;
-  border-bottom: 1px solid #f0f5fa;
 }
 
 label:last-child {
@@ -221,6 +258,7 @@ input {
   font-size: 15px;
   padding: 7px 0;
   border: none;
+  margin-bottom: 20px;
 }
 
 select {
@@ -246,7 +284,7 @@ button {
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
-
+/*
 
 /* -- Media Queries -- */
 
@@ -299,6 +337,11 @@ button {
     font-size: 2.2rem;
   }
 
+  .signup {
+    height: 70vh;
+    width: 90vw;
+  }
+
   #footer {
     margin-top: 100px;
   }
@@ -325,6 +368,11 @@ button {
     margin: 150px;
   }
 
+  .signup {
+    height: 70vh;
+    width: 90vw;
+  }
+
   #footer {
     margin-top: 100px;
   }
@@ -341,7 +389,6 @@ button {
   .hero-heading {
     font-size: 3rem;
   }
-
 
   .heading {
     margin: 150px;

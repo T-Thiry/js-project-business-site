@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;;
+  font-family: 'Courier New', Courier, monospace;
+  ;
 }
 
 body {
@@ -30,8 +31,8 @@ header {
   display: flex;
   width: 100%;
   list-style: none;
-  justify-content: space-evenly; 
-  }
+  justify-content: space-evenly;
+}
 
 .nav-links {
   list-style: none;
@@ -102,7 +103,7 @@ button {
 
 .event-card {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   background-color: hsl(217, 19%, 35%);
   color: #ffffff;
   border-radius: 8px;
@@ -111,8 +112,8 @@ flex-direction: column;
 }
 
 .event-card img {
-width: 100%;
-height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .event-card-content {
@@ -400,7 +401,7 @@ height: auto;
     font-size: 1.2rem;
   }
 
-  .review-card h4, 
+  .review-card h4,
   .review-card p {
     font-size: 1rem;
   }
@@ -547,7 +548,7 @@ height: auto;
   .review-card h4,
   .review-card p {
     font-size: 1.2rem;
-  } 
+  }
 
 
   .newsletter {

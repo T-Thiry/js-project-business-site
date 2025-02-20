@@ -45,17 +45,35 @@
       <div class="form">
         <h1>Sign up</h1>
         <form action="http://httpbin.org/anything" method="POST">
+          
+          <div class="form-control">
+          <label for="email">Email</label>
           <input type="text" placeholder="Enter email" name="email" required>
+          </div>
+          
+          <div class="form-control">
+          <label for="password">Password</label>
           <input type="psw" placeholder="Enter password" name="psw" required>
-          <input type="password" placeholder="Repeat password" required>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
-          <p class="terms">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
-              Privacy</a></p>
-          <button type="submit">Submit</button>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Repeat Password</label>
+          <input type="password" placeholder="Enter password" required>
+        </div>
+        
+          <div class="sign-in-extras">
+            <div>
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember</label>
+            </div>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button class="btn primary" type="submit">Sign In</button>
         </form>
       </div>
     </div>
   </div>
+
 
   <!-- Form Code along tuesday-->
   <!-- 
@@ -84,6 +102,8 @@
     </form>
   </section>
   -->
+
+  <!--
   <form action>
     <h2 class="user-information">User Information</h2>
     <fieldset>
@@ -116,6 +136,7 @@
     </fieldset>
     <button type="submit">Register</button>
   </form>
+-->
 </body>
 
 </html>
