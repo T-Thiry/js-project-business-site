@@ -64,17 +64,86 @@ button {
   border: none;
 }
 
+/* Testing ham menu */
+.off-screen-menu {
+  background-color: #2e2e2e;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 3rem;
+  transition: .3 ease;
+}
+
+.off-screen-menu ul {
+  width: 100%;
+  cursor: pointer;
+}
+
+.off-screen-menu li {
+  padding: 20px 0 20px 40px;
+list-style: none;
+border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
+}
+
+.off-screen-menu a {
+font-size: 1.2rem;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
 .hamburger-menu {
   display: flex;
   flex-direction: column;
+  height: 48px;
+  width: 48px;
+  margin-left: auto;
+  position: relative;
 }
 
-.menu-line {
-  width: 1.5rem;
-  height: 2.3px;
-  margin-bottom: 0.3rem;
-  background-color: #ffffff;
+.hamburger-menu span {
+  height: 3px;
+  width: 60%;
+  background-color: #ffffff ;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .3s ease;
 }
+
+.hamburger-menu span:nth-child(1) {
+  top: 32%;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 68%;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
 
 
 /* This is my hero section */
@@ -269,15 +338,15 @@ button {
     display: none;
   }
 
-  .hamburger-menu {
-    margin: 8px;
+  .off-screen-menu {
+/* Fortsätt här */
   }
 
-  .menu-line {
-    width: 1.2rem;
-    height: 2px;
-    margin-bottom: 0.25rem;
+  .hamburger-menu span {
+    height: 3px;
+    width: 60%;
   }
+
 
   .hero {
     height: 100vh;
@@ -354,17 +423,6 @@ button {
   button {
     display: none;
   }
-
-  .hamburger-menu {
-    margin: 8px;
-  }
-
-  .menu-line {
-    width: 1.2rem;
-    height: 2px;
-    margin-bottom: 0.25rem;
-  }
-
 
   .hero-heading {
     font-size: 1.8rem;
