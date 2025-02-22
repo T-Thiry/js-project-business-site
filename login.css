@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
-  ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
 
 body {
   background-color: #ffffff;
@@ -23,8 +24,9 @@ header {
 
 .logo {
   color: #ffffff;
+  font-family: "Playwrite IT Moderna", serif;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .navbar {
@@ -58,22 +60,90 @@ button {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  padding: 10px 20px;
+  padding: 8px 20px;
   margin: 10px 0;
   border-radius: 8px;
   border: none;
 }
 
-.hamburger-menu {
+/* This is my hamburger menu */
+.off-screen-menu {
+  background-color: #2e2e2e;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 3rem;
+  transition: .3 ease;
 }
 
-.menu-line {
-  width: 1.5rem;
-  height: 2.3px;
-  margin-bottom: 0.3rem;
+.off-screen-menu ul {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.off-screen-menu li {
+  padding: 20px 0 20px 5%;
+  list-style: none;
+  border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
+}
+
+.off-screen-menu a {
+  font-size: 1.2rem;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.hamburger-menu-icon {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  width: 48px;
+  margin-left: auto;
+  position: relative;
+}
+
+.hamburger-menu-icon span {
+  height: 3px;
+  width: 60%;
   background-color: #ffffff;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .3s ease;
+}
+
+.hamburger-menu-icon span:nth-child(1) {
+  top: 32%;
+}
+
+.hamburger-menu-icon span:nth-child(3) {
+  top: 68%;
+}
+
+.hamburger-menu-icon.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu-icon.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
 }
 
 
@@ -87,19 +157,24 @@ button {
   background-position: bottom;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
   color: #ffffff;
   text-align: center;
 }
 
+.hero-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
 
-/* -- This is my signup section-- */
-.signup-container {
+
+/* -- This is my login/sign up section-- */
+.login-container {
   display: flex;
   justify-content: center;
 }
 
-.signup {
+.login {
   display: flex;
   height: 70vh;
   width: 50vw;
@@ -115,208 +190,140 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 40px 8%;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
+  border-radius: 8px;
 }
 
 .form h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 40px;
 }
 
 .form input {
-  font-size: 16px;
   width: 100%;
   padding: 10px 20px;
   border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: unset;
   color: #ffffff;
-  margin: 4px 0 20px 0;
+  margin: 6px 0 20px 0;
 }
 
-.sign-in-extras {
+.form input:not(:nth-child(1)) {
+  margin: 6px 0 10px 0;
+}
+
+.primary-login {
   display: flex;
-  align-items: start;
+  margin-top: 20px;
   justify-content: center;
-  flex-direction: column;
+  gap: 5px;
 }
 
-.sign-in-extras div {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.sign-in-extras a {
-  color: #c652e7;
-  font-size: 1rem;
-}
-
-.form button {
-  margin-top: 30px;
-  padding: 10px 26px;
+.primary-btn {
+  background: #c652e7;
+  color: #ffffff;
   border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn {
   display: flex;
+  padding: 10px 10px;
+  flex: auto;
   align-items: center;
+  gap: 5px;
   justify-content: center;
-  gap: 0.7rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
+} 
+
+.or {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+  line-height: 0.1em;
+  margin: 15px 0;
+}
+.or span {
+  background: #272850;
+  padding: 0 10px;
 }
 
-input:not([type="checkbox"]) {
-  width: 100%;
-  border: 1px solid lightgrey;
-  padding: 0.7rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-}
-
-input .checkbox {
+.google-login {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-/* -- Contact Form ends here -- */
+.google-btn {
+  background: #ffffff;
+  color: #2e2e2e;
+  border-radius: 8px;
+  display: flex;
+  padding: 8px 10px;
+  flex: auto;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.google-login img {
+  width: 24px;
+  margin-right: 6px;
+}
+
+.btn-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.subtitle a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #c652e7;
+}
+
+.forget-pass {
+  display: block;
+  font-size: 0.8rem;
+  text-align: left;
+  color: #c652e7;
+}
 
 
-/* -- Footer -- */
-
+/* This is my footer section */
 #footer {
   background-color: #252525;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 20px 0;
-  margin-top: 180px;
+  margin-top: 100px;
 }
 
-footer p {
+#footer p {
   background-color: #252525;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 
-/* -- Form on page Contact Us-- */
-/*
-form {
-  display: block;
-  unicode-bidi: isolate;
-  padding: 20px;
-  margin-top: 100px;
-  max-width: 500px;
-  border: 1px solid lightgrey;
-  border-radius: 4px;
-}
+/* -- Media Queries start here -- */
+@media(max-width: 319px) {
 
-.user-information {
-  font-family: "montserrat";
-  font-size: 15px;
-  text-align: left;
-  text-transform: uppercase;
-  margin: 10px 0px;
-}
-
-fieldset {
-  background: white;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px 0 rgba(50, 50, 93, 0.15), 0 4px 6px 0 rgba(112, 157, 199, 0.15);
-}
-
-label {
-  display: flex;
-  align-items: center;
-  font-family: "montserrat";
-  font-weight: 500;
-}
-
-label:last-child {
-  border-bottom: none;
-}
-
-.username,
-.user-emailaddress,
-.user-postalcode,
-.user-phonenumber,
-.user-country {
-  width: 23%;
-  text-align: right;
-  margin-right: 15px;
-  flex-shrink: 0;
-}
-
-input {
-  width: 100%;
-  font-size: 15px;
-  padding: 7px 0;
-  border: none;
-  margin-bottom: 20px;
-}
-
-select {
-  width: 100%;
-  margin: 10px 10px 10px 0;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: none;
-  font-size: 15px;
-  color: #313b3f;
-}
-
-button {
-  background-color: rgb(198, 82, 231);
-  color: white;
-  padding: 6px 18px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-}
-/*
-
-/* -- Media Queries -- */
-
-@media(max-width: 320px) {
-
-  .navbar {
+  body {
     display: none;
   }
-
-  button {
-    display: none;
-  }
-
-  .hamburger-menu {
-    margin: 8px;
-  }
-
-  .heading {
-    font-size: 18px;
-  }
-
 }
 
-/* Media Querie Mobile Device */
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-  .heading {
-    font-size: 20px;
-    margin: 100px;
-  }
-
   .navbar {
     display: none;
   }
@@ -325,8 +332,31 @@ button {
     display: none;
   }
 
-  .hamburger-menu {
-    margin: 8px;
+  .logo {
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .off-screen-menu li {
+   padding: 15px ;
+  }
+
+  .off-screen-menu a {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
   }
 
   .hero {
@@ -334,22 +364,23 @@ button {
   }
 
   .hero-heading {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
   }
 
-  .signup {
+  .login {
     height: 70vh;
     width: 90vw;
   }
 
-  #footer {
-    margin-top: 100px;
+  #footer a,
+  #footer p {
+    font-size: 0.8rem;
   }
 }
 
-/* Media Querie Tablet Device */
 
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1023px) {
 
   .navbar {
     display: none;
@@ -359,61 +390,84 @@ button {
     display: none;
   }
 
-  .hamburger-menu {
-    margin: 8px;
+  .logo {
+    font-size: 1rem;
+    z-index: 1;
   }
 
-  .heading {
-    font-size: 20px;
-    margin: 150px;
+  .off-screen-menu a {
+    font-size: 1rem;
+    font-weight: 400;
   }
 
-  .signup {
-    height: 70vh;
-    width: 90vw;
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
   }
 
-  #footer {
-    margin-top: 100px;
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.9rem;
   }
 }
 
-/* Media Querie Desktop Device */
 
 @media (min-width: 1024px) and (max-width: 1800px) {
 
-  .hamburger-menu {
+  .off-screen-menu {
     display: none;
-  }
+   }
+ 
+   .hamburger-menu-icon {
+     display: none;
+   }
+ 
+   .hero-heading {
+     font-size: 2rem;
+   }
+ 
+   #footer a,
+   #footer p {
+     font-size: 0.9rem;
+   }
+ }
 
-  .hero-heading {
-    font-size: 3rem;
-  }
-
-  .heading {
-    margin: 150px;
-  }
-
-}
-
-/* Media Querie Large Desktop Device */
 
 @media (min-width: 1280px) {
 
-  .hamburger-menu {
-    display: none;
+  .hero {
+    height: 60vh;
   }
 
   .hero-heading {
-    font-size: 3.5rem;
+    font-size: 2.4rem;
   }
 
-  .hero-text {
-    font-size: 1.2rem;
+  #footer {
+    margin-top: 150px;
   }
 
-  .heading {
-    margin: 150px;
+  #footer a,
+  #footer p {
+    font-size: 1rem;
   }
+}
 
+
+@media (min-width: 1801px) {
+  body {
+    display: none;
+}
 }

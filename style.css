@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
-  ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
 
 body {
   background-color: #ffffff;
@@ -23,8 +24,9 @@ header {
 
 .logo {
   color: #ffffff;
+  font-family: "Playwrite IT Moderna", serif;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .navbar {
@@ -58,13 +60,13 @@ button {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  padding: 10px 20px;
+  padding: 8px 20px;
   margin: 10px 0;
   border-radius: 8px;
   border: none;
 }
 
-/* Testing ham menu */
+/* This is my hamburger menu */
 .off-screen-menu {
   background-color: #2e2e2e;
   height: 100vh;
@@ -75,7 +77,6 @@ button {
   right: -100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: left;
   font-size: 3rem;
@@ -85,23 +86,24 @@ button {
 .off-screen-menu ul {
   width: 100%;
   cursor: pointer;
+  margin-top: 5rem;
 }
 
 .off-screen-menu li {
-  padding: 20px 0 20px 40px;
-list-style: none;
-border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
+  padding: 20px 0 20px 5%;
+  list-style: none;
+  border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
 }
 
 .off-screen-menu a {
-font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .off-screen-menu.active {
   right: 0;
 }
 
-.hamburger-menu {
+.hamburger-menu-icon {
   display: flex;
   flex-direction: column;
   height: 48px;
@@ -110,10 +112,10 @@ font-size: 1.2rem;
   position: relative;
 }
 
-.hamburger-menu span {
+.hamburger-menu-icon span {
   height: 3px;
   width: 60%;
-  background-color: #ffffff ;
+  background-color: #ffffff;
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -122,24 +124,24 @@ font-size: 1.2rem;
   transition: .3s ease;
 }
 
-.hamburger-menu span:nth-child(1) {
+.hamburger-menu-icon span:nth-child(1) {
   top: 32%;
 }
 
-.hamburger-menu span:nth-child(3) {
+.hamburger-menu-icon span:nth-child(3) {
   top: 68%;
 }
 
-.hamburger-menu.active span:nth-child(1) {
+.hamburger-menu-icon.active span:nth-child(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.hamburger-menu.active span:nth-child(2) {
- opacity: 0;
+.hamburger-menu-icon.active span:nth-child(2) {
+  opacity: 0;
 }
 
-.hamburger-menu.active span:nth-child(3) {
+.hamburger-menu-icon.active span:nth-child(3) {
   top: 50%;
   transform: translate(-50%, 50%) rotate(-45deg);
 }
@@ -159,6 +161,12 @@ font-size: 1.2rem;
   font-size: 2.4rem;
   color: #ffffff;
   text-align: center;
+}
+
+.hero-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 
@@ -191,10 +199,12 @@ font-size: 1.2rem;
 
 .event-card-content h3 {
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .event-card-content p {
   font-size: 1rem;
+  font-weight: 200;
   line-height: 1.5;
   margin-top: 20px;
 }
@@ -244,26 +254,26 @@ font-size: 1.2rem;
 .review-image {
   width: 54px;
   height: 54px;
-  border: 2px solid rgb(177, 115, 225);
+  border: 1px solid #c652e7;
   border-radius: 50%;
 }
 
 .review-card h3 {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 5px;
 }
 
 .review-card h4 {
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 0.8rem;
+  font-weight: 200;
   margin-top: 5px;
   opacity: 70%;
 }
 
 .review-card p {
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 0.8rem;
+  font-weight: 200;
   margin-top: 20px;
   line-height: 1.5;
 }
@@ -271,7 +281,7 @@ font-size: 1.2rem;
 
 /* This is my newsletter section */
 .newsletter {
-  padding: 100px;
+  padding: 100px 50px;
   margin: 100px 10% 100px 10%;
   background-image: linear-gradient(rgba(95, 65, 170, 0.5), rgba(48, 59, 75, 0.5)), url(./Images/Design.webp);
   background-position: center;
@@ -280,16 +290,10 @@ font-size: 1.2rem;
   text-align: center;
 }
 
-.newsletter h1 {
+.newsletter h2 {
   color: #ffffff;
   font-size: 1rem;
-  margin-bottom: 20px;
   padding: 0;
-}
-
-.newsletter button {
-  font-size: 1.2rem;
-  cursor: pointer;
 }
 
 
@@ -299,6 +303,7 @@ font-size: 1.2rem;
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
+  margin-top: 100px;
 }
 
 #footer p {
@@ -306,28 +311,20 @@ font-size: 1.2rem;
   color: #ffffff;
   font-size: 1rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 
 /* -- Media Queries start here -- */
-@media(max-width: 320px) {
+@media(max-width: 319px) {
 
-  .navbar {
+  body {
     display: none;
-  }
-
-  button {
-    display: none;
-  }
-
-  .hamburger-menu {
-    margin: 8px;
   }
 }
 
 
 /* Media Querie Mobile Device */
-
 @media (min-width: 320px) and (max-width: 480px) {
 
   .navbar {
@@ -338,15 +335,32 @@ font-size: 1.2rem;
     display: none;
   }
 
-  .off-screen-menu {
-/* Fortsätt här */
+  .logo {
+    z-index: 1;
+    font-size: 1rem;
   }
 
-  .hamburger-menu span {
-    height: 3px;
-    width: 60%;
+  .off-screen-menu li {
+   padding: 15px ;
   }
 
+  .off-screen-menu a {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
 
   .hero {
     height: 100vh;
@@ -366,13 +380,12 @@ font-size: 1.2rem;
   }
 
   .event-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .event-card p {
     font-size: 1rem;
   }
 
+  .event-card p {
+    font-size: 0.9rem;
+  }
 
   .review-container {
     margin-top: 100px;
@@ -380,30 +393,24 @@ font-size: 1.2rem;
   }
 
   .review-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .review-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .review-card p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-
 
   .newsletter {
     margin: 100px 5% 0 5%;
   }
 
-  .newsletter h1 {
+  .newsletter h2 {
     font-size: 1rem;
     line-height: 1.9;
-  }
-
-
-  #footer {
-    margin-top: 100px;
   }
 
   #footer a,
@@ -414,7 +421,7 @@ font-size: 1.2rem;
 
 /* Media Querie Tablet Device */
 
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1023px) {
 
   .navbar {
     display: none;
@@ -424,17 +431,39 @@ font-size: 1.2rem;
     display: none;
   }
 
+  .logo {
+    font-size: 1rem;
+    z-index: 1;
+  }
+
+  .off-screen-menu a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
   .hero-heading {
     font-size: 1.8rem;
   }
-
 
   .event-container {
     margin-top: 100px;
   }
 
   .event-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .event-card p {
@@ -449,14 +478,13 @@ font-size: 1.2rem;
     grid-column: 3 / 5;
   }
 
-
   .review-container {
     grid-template-columns: repeat(2, 1fr);
     margin: 100px 5% 0 5%;
   }
 
   .review-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .review-card h4,
@@ -464,24 +492,17 @@ font-size: 1.2rem;
     font-size: 1rem;
   }
 
-
   .newsletter {
     margin: 100px 5% 0 5%;
   }
 
-  .newsletter h1 {
+  .newsletter h2 {
     font-size: 1.2rem;
-  }
-
-
-  #footer {
-    margin-top: 100px;
   }
 
   #footer a,
   #footer p {
-    font-size: 1rem;
-    margin: 16px 0;
+    font-size: 0.9rem;
   }
 }
 
@@ -490,12 +511,11 @@ font-size: 1.2rem;
 
 @media (min-width: 1024px) and (max-width: 1800px) {
 
-  li,
-  a {
-    font-size: 1rem;
+  .off-screen-menu {
+   display: none;
   }
 
-  .hamburger-menu {
+  .hamburger-menu-icon {
     display: none;
   }
 
@@ -523,7 +543,6 @@ font-size: 1.2rem;
     font-size: 1rem;
   }
 
-
   .review-container {
     grid-template-columns: repeat(4, 1fr);
     margin: 100px 5% 0 5%;
@@ -538,24 +557,18 @@ font-size: 1.2rem;
     font-size: 1rem;
   }
 
-
   .newsletter {
+    padding: 120px;
     margin: 100px 5% 0 5%;
   }
 
-  .newsletter h1 {
+  .newsletter h2 {
     font-size: 1.4rem;
-  }
-
-
-  #footer {
-    margin-top: 100px;
   }
 
   #footer a,
   #footer p {
-    font-size: 1rem;
-    margin: 16px 0;
+    font-size: 0.9rem;
   }
 }
 
@@ -564,21 +577,24 @@ font-size: 1.2rem;
 
 @media (min-width: 1280px) {
 
-  li,
-  a {
-    font-size: 1.2rem;
-  }
-
-  .hamburger-menu {
+  .hamburger-menu-icon {
     display: none;
   }
 
+  .hero {
+    height: 60vh;
+  }
+
   .hero-heading {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 
   .event-container {
     margin-top: 150px;
+  }
+
+  .event-card-content {
+    padding: 25px 35px;
   }
 
   .event-card:nth-child(1) {
@@ -590,13 +606,12 @@ font-size: 1.2rem;
   }
 
   .event-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .event-card p {
     font-size: 1.2rem;
   }
 
+  .event-card p {
+    font-size: 1rem;
+  }
 
   .review-container {
     grid-template-columns: repeat(4, 1fr);
@@ -605,18 +620,17 @@ font-size: 1.2rem;
 
   .review-card h4,
   .review-card p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
-
   .newsletter {
+    padding: 140px;
     margin: 150px 5% 0 5%;
   }
 
-  .newsletter h1 {
+  .newsletter h2 {
     font-size: 1.6rem;
   }
-
 
   #footer {
     margin-top: 150px;
@@ -624,7 +638,12 @@ font-size: 1.2rem;
 
   #footer a,
   #footer p {
-    font-size: 1.2rem;
-    margin: 20px 0;
+    font-size: 1rem;
   }
+}
+
+@media (min-width: 1801px) {
+  body {
+    display: none;
+}
 }

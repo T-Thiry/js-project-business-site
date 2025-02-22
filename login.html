@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Home</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Honk:MORF@16&family=Playwrite+IT+Moderna&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -25,15 +27,25 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
-    <a class="cta" href="login.html"><button>Login</button></a>
+    <a class="navbar-btn" href="login.html"><button>Login</button></a>
 
-    
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Meetups</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
 
-    <div class="hamburger-menu">
+    <div class="hamburger-menu-icon">
       <span class="menu-line"></span>
       <span class="menu-line"></span>
       <span class="menu-line"></span>
     </div>
+
   </header>
 
   <!-- This is my hero section -->
@@ -41,104 +53,46 @@
     <h1 class="hero-heading">Let's build something<br>awesome together</h1>
   </section>
 
-  <!-- This is my sign up section -->
-  <div class="signup-container">
-    <div class="signup">
+  <!-- This is my login section -->
+  <div class="login-container">
+    <div class="login">
       <div class="form">
-        <h1>Sign up</h1>
+        <h1>Login</h1>
         <form action="http://httpbin.org/anything" method="POST">
-          
           <div class="form-control">
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter email" name="email" required>
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter email" name="email" required>
           </div>
-          
           <div class="form-control">
-          <label for="password">Password</label>
-          <input type="psw" placeholder="Enter password" name="psw" required>
-        </div>
-
-        <div class="form-control">
-          <label for="password">Repeat Password</label>
-          <input type="password" placeholder="Enter password" required>
-        </div>
-        
-          <div class="sign-in-extras">
-            <div>
-              <input type="checkbox" id="remember">
-              <label for="remember">Remember</label>
-            </div>
-            <a href="#">Forgot password?</a>
+            <label for="password">Password</label>
+            <input type="psw" placeholder="Enter password" name="psw" required>
           </div>
-          <button class="btn primary" type="submit">Sign In</button>
+          <a class="forget-pass" href="#">Forgot password?</a>
+          <div class="primary-login">
+            <button class="primary-btn">
+              <p class="btn-text">Login</p>
+            </button>
+          </div>
+          <p class="or"><span>or</span></p>
+          <div class="google-login">
+            <button class="google-btn">
+              <img alt="Google"
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiNGQkJCMDA7IiBkPSJNMTEzLjQ3LDMwOS40MDhMOTUuNjQ4LDM3NS45NGwtNjUuMTM5LDEuMzc4QzExLjA0MiwzNDEuMjExLDAsMjk5LjksMCwyNTYNCgljMC00Mi40NTEsMTAuMzI0LTgyLjQ4MywyOC42MjQtMTE3LjczMmgwLjAxNGw1Ny45OTIsMTAuNjMybDI1LjQwNCw1Ny42NDRjLTUuMzE3LDE1LjUwMS04LjIxNSwzMi4xNDEtOC4yMTUsNDkuNDU2DQoJQzEwMy44MjEsMjc0Ljc5MiwxMDcuMjI1LDI5Mi43OTcsMTEzLjQ3LDMwOS40MDh6Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojNTE4RUY4OyIgZD0iTTUwNy41MjcsMjA4LjE3NkM1MTAuNDY3LDIyMy42NjIsNTEyLDIzOS42NTUsNTEyLDI1NmMwLDE4LjMyOC0xLjkyNywzNi4yMDYtNS41OTgsNTMuNDUxDQoJYy0xMi40NjIsNTguNjgzLTQ1LjAyNSwxMDkuOTI1LTkwLjEzNCwxNDYuMTg3bC0wLjAxNC0wLjAxNGwtNzMuMDQ0LTMuNzI3bC0xMC4zMzgtNjQuNTM1DQoJYzI5LjkzMi0xNy41NTQsNTMuMzI0LTQ1LjAyNSw2NS42NDYtNzcuOTExaC0xMzYuODlWMjA4LjE3NmgxMzguODg3TDUwNy41MjcsMjA4LjE3Nkw1MDcuNTI3LDIwOC4xNzZ6Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojMjhCNDQ2OyIgZD0iTTQxNi4yNTMsNDU1LjYyNGwwLjAxNCwwLjAxNEMzNzIuMzk2LDQ5MC45MDEsMzE2LjY2Niw1MTIsMjU2LDUxMg0KCWMtOTcuNDkxLDAtMTgyLjI1Mi01NC40OTEtMjI1LjQ5MS0xMzQuNjgxbDgyLjk2MS02Ny45MWMyMS42MTksNTcuNjk4LDc3LjI3OCw5OC43NzEsMTQyLjUzLDk4Ljc3MQ0KCWMyOC4wNDcsMCw1NC4zMjMtNy41ODIsNzYuODctMjAuODE4TDQxNi4yNTMsNDU1LjYyNHoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiNGMTQzMzY7IiBkPSJNNDE5LjQwNCw1OC45MzZsLTgyLjkzMyw2Ny44OTZjLTIzLjMzNS0xNC41ODYtNTAuOTE5LTIzLjAxMi04MC40NzEtMjMuMDEyDQoJYy02Ni43MjksMC0xMjMuNDI5LDQyLjk1Ny0xNDMuOTY1LDEwMi43MjRsLTgzLjM5Ny02OC4yNzZoLTAuMDE0QzcxLjIzLDU2LjEyMywxNTcuMDYsMCwyNTYsMA0KCUMzMTguMTE1LDAsMzc1LjA2OCwyMi4xMjYsNDE5LjQwNCw1OC45MzZ6Ii8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+              <p class="btn-text">Sign in with Google</p>
+            </button>
+          </div>
+          <p class="subtitle">Don't have an account? <a href="#"> Sign Up</a></p>
         </form>
       </div>
     </div>
   </div>
 
-
-  <!-- Form Code along tuesday-->
-  <!-- 
-  <section class="form-container">
-    <h1 class="forms-text">Tickets to Hackaton</h1>
-    <form action="http://httpbin.org/anything" method="POST">
-      <div class="form-input">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required />
-      </div>
-
-      <div class="form-input">
-        <label for="movie">Choose a movie</label>
-        <select name="movie" id="movie">
-          <option value="paddington">Paddington in Peru</option>
-          <option value="moana">Moana</option>
-          <option value="peru">Peru</option>
-        </select>
-      </div>
-
-      <div class="form-input">
-        <label for="amount">Number of tickets</label>
-        <input type="number" id="amount" name="amount" value="1" min="1" max="10" />
-      </div>
-      <button type="submit">Buy Tickets</button>
-    </form>
+  <!-- This is my footer section -->
+  <section id="footer">
+    <p><a href="#">info@hookitup.se</a></p>
+    <p>All Rights Reserved by &copy;HookITup 2025</p>
   </section>
-  -->
-
-  <!--
-  <form action>
-    <h2 class="user-information">User Information</h2>
-    <fieldset>
-      <label>
-        <span class="username">Name</span>
-        <input type="text" name="name" placeholder="Jenny Rosen" required>
-      </label>
-      <label>
-        <span class="user-emailaddress">Email</span>
-        <input type="email" name="email" placeholder="jenny.rosen@gmail.com" required>
-      </label>
-      <label>
-        <span class="user-phonenumber">Phone</span>
-        <input type="phonenumber" name="phonenumber" placeholder="+46734445555" required>
-      </label>
-      <label>
-        <span class="user-postalcode">Postal Code</span>
-        <input type="text" name="postalCode" placeholder="416 54" required>
-      </label>
-      <label>
-        <span class="user-country">Country</span>
-        <select name="country">
-          <option value="sweden">Sweden</option>
-          <option value="sweden">Norway</option>
-          <option value="sweden">Denmark</option>
-          <option value="sweden">Finland</option>
-          <option value="sweden">Island</option>
-        </select>
-      </label>
-    </fieldset>
-    <button type="submit">Register</button>
-  </form>
--->
+  <script src="./script.js"></script>
 </body>
 
 </html>
