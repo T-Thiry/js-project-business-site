@@ -206,6 +206,7 @@ button {
   background-color: unset;
   color: #ffffff;
   margin: 6px 0 20px 0;
+  font-size: 0.9rem;
 }
 
 .form input:not(:nth-child(1)) {
