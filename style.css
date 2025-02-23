@@ -145,7 +145,6 @@ button {
 }
 
 
-
 /* This is my hero section */
 .hero {
   display: flex;
@@ -161,7 +160,7 @@ button {
   text-align: center;
 }
 
-.hero-heading {
+.hero h1 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
@@ -195,7 +194,7 @@ button {
   padding: 20px;
 }
 
-.event-card-content h3 {
+.event-card-content h2 {
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -256,13 +255,13 @@ button {
   border-radius: 50%;
 }
 
-.review-card h3 {
+.review-card-header h3 {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 5px;
 }
 
-.review-card h4 {
+.review-card-header h4 {
   font-size: 0.8rem;
   font-weight: 200;
   margin-top: 5px;
@@ -364,7 +363,7 @@ button {
     height: 100vh;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 1.4rem;
   }
 
@@ -377,11 +376,11 @@ button {
     grid-column: 1;
   }
 
-  .event-card h3 {
+  .event-card-content h2 {
     font-size: 1rem;
   }
 
-  .event-card p {
+  .event-card-content p {
     font-size: 0.9rem;
   }
 
@@ -390,11 +389,11 @@ button {
     margin: 100px 5% 0 5%;
   }
 
-  .review-card h3 {
+  .review-card-header h3 {
     font-size: 1rem;
   }
 
-  .review-card h4 {
+  .review-card-header h4 {
     font-size: 0.9rem;
   }
 
@@ -452,7 +451,7 @@ button {
     top: 65%;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 1.8rem;
   }
 
@@ -460,11 +459,11 @@ button {
     margin-top: 100px;
   }
 
-  .event-card h3 {
+  .event-card-content h2 {
     font-size: 1.1rem;
   }
 
-  .event-card p {
+  .event-card-content p {
     font-size: 1rem;
   }
 
@@ -481,11 +480,11 @@ button {
     margin: 100px 5% 0 5%;
   }
 
-  .review-card h3 {
+  .review-card-header h3 {
     font-size: 1.1rem;
   }
 
-  .review-card h4,
+  .review-card-header h4,
   .review-card p {
     font-size: 1rem;
   }
@@ -517,7 +516,7 @@ button {
     display: none;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 2rem;
   }
 
@@ -533,11 +532,11 @@ button {
     grid-column: 3 / 5;
   }
 
-  .event-card h3 {
+  .event-card-content h2 {
     font-size: 1.2rem;
   }
 
-  .event-card p {
+  .event-card-content p {
     font-size: 1rem;
   }
 
@@ -546,11 +545,11 @@ button {
     margin: 100px 5% 0 5%;
   }
 
-  .review-card h3 {
+  .review-card-header h3 {
     font-size: 1.2rem;
   }
 
-  .review-card h4,
+  .review-card-header h4,
   .review-card p {
     font-size: 1rem;
   }
@@ -583,7 +582,7 @@ button {
     height: 60vh;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 2.4rem;
   }
 
@@ -595,20 +594,20 @@ button {
     padding: 25px 35px;
   }
 
+  .event-card-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .event-card-content p {
+    font-size: 1rem;
+  }
+
   .event-card:nth-child(1) {
     grid-column: 1 / 3;
   }
 
   .event-card:nth-child(2) {
     grid-column: 3 / 5;
-  }
-
-  .event-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .event-card p {
-    font-size: 1rem;
   }
 
   .review-container {

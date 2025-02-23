@@ -160,7 +160,7 @@ button {
   text-align: center;
 }
 
-.hero-heading {
+.hero h1 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
@@ -192,7 +192,7 @@ button {
   border-radius: 8px;
 }
 
-.form h1 {
+.form h2 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 40px;
@@ -364,7 +364,7 @@ button {
     height: 100vh;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 1.4rem;
     line-height: 1.8;
   }
@@ -414,7 +414,7 @@ button {
     top: 65%;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 1.8rem;
   }
 
@@ -435,7 +435,7 @@ button {
     display: none;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 2rem;
   }
 
@@ -452,7 +452,7 @@ button {
     height: 60vh;
   }
 
-  .hero-heading {
+  .hero h1 {
     font-size: 2.4rem;
   }
 
