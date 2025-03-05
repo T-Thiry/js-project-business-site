@@ -230,6 +230,7 @@ button {
   align-items: center;
   gap: 5px;
   justify-content: center;
+  cursor: pointer;
 }
 
 .or {
@@ -262,6 +263,8 @@ button {
   gap: 5px;
   justify-content: center;
   margin-bottom: 15px;
+  cursor: pointer;
+  
 }
 
 .google-login img {
