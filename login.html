@@ -28,7 +28,7 @@
       </ul>
     </nav>
     <a class="navbar-btn" href="login.html"><button>Login</button></a>
- 
+
     <!-- This is the navbar when it's active on mobile and tablet -->
     <div class="hamburger-menu">
       <ul>
@@ -58,16 +58,18 @@
     <div class="login">
       <div class="form">
         <h2>Login</h2>
+
         <form action="http://httpbin.org/anything" method="POST">
           <div class="form-control">
             <label for="email">Email</label>
-            <input type="text" placeholder="Enter email" name="email" required>
+            <input type="text" id="email" placeholder="Enter email" name="email" required>
           </div>
           <div class="form-control">
-            <label for="password">Password</label>
-            <input type="psw" placeholder="Enter password" name="psw" required>
+            <label 
+            for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" name="password" required>
           </div>
-          <a class="forget-pass" href="#">Forgot password?</a>
+          <a class="forgot-pass" href="#">Forgot password?</a>
           <div class="primary-login">
             <button class="primary-btn">
               <p class="btn-text">Login</p>
@@ -83,6 +85,7 @@
           </div>
           <p class="subtitle">Don't have an account? <a href="#"> Sign Up</a></p>
         </form>
+        
       </div>
     </div>
   </div>
